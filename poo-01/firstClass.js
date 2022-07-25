@@ -68,3 +68,31 @@ class Person {
 let hero = new Person('Lucas', 'Silva', 21, 'male', '1.70', ['MMORPG', 'RPG', 'Cardgames', 'guitar', 'books', 'tec']);
 
 console.log(hero.bio());
+
+//=======================================
+
+// Criando objetos com o método Object()
+
+let hero1 = new Object();
+
+// Adicionando propriedades
+
+hero1.name = 'Lucas';
+hero1.age = 21;
+hero1.greeting = function() {
+    return `Hello, I'm ${this.name}, my age is ${this.age}!`
+}
+
+console.log(hero1.greeting())
+
+// Criar um objeto com literal de objeto
+
+let hero2 = new Object({
+    name: 'Zé',
+    age: '21',
+    greeting: function() {
+        return `Hi, I'm ${this.name}`
+    }
+});
+
+console.log(hero2.greeting())
