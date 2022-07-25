@@ -19,12 +19,20 @@ console.log(lucas.greeting());
 
 // Modo otimizado - Função Construtora
 
-function Person(name) {
-    obj.name = name;
-    obj.greeting = function() {
-        return 'Eae, me chamo ' + obj.name + '!'
-    };
+class Person {
+    constructor(name) {
+        this.name = name;
+        this.greeting = function () {
+            return 'Eae, me chamo ' + this.name + '!';
+        };
+    }
 };
 
 let person1 = new Person('Lucas');
 let person2 = new Person('Zé');
+
+console.log(person1.name);
+console.log(person1.greeting());
+
+console.log(person2.name);
+console.log(person2.greeting());
