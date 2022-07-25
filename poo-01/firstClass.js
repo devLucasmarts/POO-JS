@@ -96,3 +96,15 @@ let hero2 = new Object({
 });
 
 console.log(hero2.greeting())
+
+//===========================================
+
+// Objetos com create() - Cria um novo objeto com base em objetos existentes
+
+let villain = Object.create(hero1)
+
+villain.name = 'Darth Vader';
+villain.age = 60;
+
+console.log(villain.greeting())
+
