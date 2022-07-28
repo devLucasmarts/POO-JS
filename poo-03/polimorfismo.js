@@ -31,3 +31,31 @@ const useVillain = (villain) => {
 
 console.log(useHero(hero));
 console.log(useVillain(villain));
+
+// ========================================
+
+// Chamando o método da classe pai dentro da classe filha com o super()
+
+
+class Human {
+    constructor(characterClass, weapon) {
+        this.characterClass = characterClass;
+        this.weapon = weapon;
+    };
+
+    getWeapon() {};
+
+    jump() { console.log(`O ${this.characterClass} saltou`) };
+};
+
+class Jedi extends Human {
+
+    getWeapon() {
+        super.jump()
+        console.log(`O ${this.characterClass} golpeou com o ${this.weapon}`);
+    };
+};
+
+const otherHero = new Jedi('Jedi', 'lightsaber');
+
+otherHero.getWeapon();
