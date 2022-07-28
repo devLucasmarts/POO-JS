@@ -51,7 +51,7 @@ class LegalPerson implements Person {
 
     get name() { return this._name };
 
-    get cpf() { return this._cnpj };
+    get cnpj() { return this._cnpj };
 
     showIdentification(): void {
         console.log(this.id, this._cnpj);
@@ -69,3 +69,21 @@ const showIdentification = (person: Person) => {
 showIdentification(person1);
 showIdentification(person2);
 showIdentification(lp);
+
+// ===========================================================
+
+// Garantia de tipo com generics
+
+class Contract<T> {
+    static _number = 0;
+    constructor(public broker: T) {}
+
+    static get number() { return this._number; };
+
+};
+
+const c1 = new Contract(person1);
+console.log(c1.broker.cpf);
+
+const c2: Contract<LegalPerson> = new Contract(lp); // Deixando explícito que lp é uma pessoa jurídica
+console.log(c2.broker.cnpj);
