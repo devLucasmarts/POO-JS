@@ -4,3 +4,12 @@ abstract class Animal {
     abstract move(): void;
 };
 
+class Bird extends Animal {
+    move() {
+        console.log(`${this.name} está voando!`);
+    };
+};
+
+const louroJose = new Bird('Louro Jose');
+
+louroJose.move();
