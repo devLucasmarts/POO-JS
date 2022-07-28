@@ -14,3 +14,12 @@ class Employee {
     };
 };
 
+console.log(Employee.employees);
+
+const firstEmployee = new Employee('Lucas');
+
+console.log(Employee.employees);
+
+const secoundEmployee = new Employee('Zé');
+
+console.log(Employee.employees);
