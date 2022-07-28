@@ -22,11 +22,11 @@ const hero = new Jedi('Jedi', 'lightsaber');
 const villain = new Sith('Darth Sith', 'lightsaber');
 
 const useHero = (hero) => {
-    return hero.getWeapon()
+    return hero.getWeapon();
 };
 
 const useVillain = (villain) => {
-    return villain.getWeapon()
+    return villain.getWeapon();
 };
 
 console.log(useHero(hero));
