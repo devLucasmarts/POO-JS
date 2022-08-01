@@ -54,3 +54,32 @@ console.log(warrior.strength);
 console.log(warrior.height);
 console.log(warrior.getWeight());
 console.log(warrior.getAge());
+
+// ==================================
+
+
+// Superclasse ou classe pai
+class Humano {
+    constructor(nome, sobrenome) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+    };
+
+    falar() {
+        console.log(`Eae, me chammo ${this.nome}`);
+    };
+};
+
+// Subclasse ou classe filha
+class Pessoa extends Humano {
+
+    dancar() {
+        console.log('🕺🕺🕺🕺🕺🕺🕺');
+    };
+};
+
+const zezinho = new Pessoa('Zé', 'Silva')
+
+zezinho.dancar();
+console.log(zezinho.nome);
+zezinho.falar();
