@@ -20,6 +20,9 @@ class Person extends Human {
         return 'Hey';
     };
 
+    getPersonClothes() {
+        return this.clothes;
+    };
 };
 
 class Clothes {
@@ -27,13 +30,10 @@ class Clothes {
         this.clothesList = clothesList
     };
 
-    getClothes() {
-        return this.clothesList;
-    };
 };
 
 const personClothes = new Clothes(['Camisa', 'Bermuda', 'Sapato']);
 
 const hero = new Person('Lucas', 170, personClothes);
 
-console.log(hero.clothes);
+console.log(hero.getPersonClothes());
