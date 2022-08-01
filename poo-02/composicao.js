@@ -1,8 +1,7 @@
 class Human {
-    constructor(name, height, Clothes) {
+    constructor(name, height) {
         this.name = name;
         this.height = height;
-        this.clothes = Clothes;
     };
 
 
@@ -10,7 +9,7 @@ class Human {
 
 class Person extends Human {
     constructor(name, height, Clothes) {
-        super(name, height, Clothes)
+        super(name, height)
         this.name = name;
         this.height = height;
         this.clothes = Clothes;
